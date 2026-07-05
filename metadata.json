@@ -1,0 +1,6 @@
+{
+  "name": "Royal Indian Invitation Studio",
+  "description": "Create ultra-premium 3D cinematic Indian Hindu wedding invitation videos in your browser with luxury templates and golden accents. Made by Abhinav (Instagram: ahirgaming2.0)",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

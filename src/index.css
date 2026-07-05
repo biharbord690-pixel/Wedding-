@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&family=Yatra+One&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Alex+Brush&family=Parisienne&family=Pinyon+Script&family=Montserrat:wght@300;400;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cinzel", Georgia, serif;
+  --font-cursive: "Great Vibes", cursive;
+  --font-royal: "Yatra One", sans-serif;
+}
+
+/* Custom Glimmer & Golden Animations */
+@keyframes gold-shine {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes slow-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes particle-drift {
+  0% { transform: translateY(0) translateX(0) scale(1); opacity: 0.2; }
+  50% { opacity: 0.8; }
+  100% { transform: translateY(-100px) translateX(20px) scale(0.5); opacity: 0; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.4)); }
+  50% { filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.8)); }
+}
+
+.text-gold-gradient {
+  background: linear-gradient(
+    to right,
+    #bf953f 0%,
+    #fcf6ba 25%,
+    #b38728 50%,
+    #fbf5b7 75%,
+    #aa771c 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gold-shine 6s linear infinite;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(
+    135deg,
+    #bf953f 0%,
+    #fcf6ba 25%,
+    #b38728 50%,
+    #fbf5b7 75%,
+    #aa771c 100%
+  );
+  background-size: 200% auto;
+}
+
+.border-gold-gradient {
+  border-image: linear-gradient(
+    to right,
+    #bf953f,
+    #fcf6ba,
+    #b38728,
+    #fbf5b7,
+    #aa771c
+  ) 1;
+}
+
+.royal-glow {
+  animation: pulse-glow 3s infinite ease-in-out;
+}
+
+.spin-slow {
+  animation: slow-spin 25s linear infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0b04;
+}
+::-webkit-scrollbar-thumb {
+  background: #b38728;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bf953f;
+}
+
